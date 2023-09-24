@@ -1,0 +1,43 @@
+Hard Drive Simulator
+Authored by Maxim Shteingard
+209171156
+
+
+Hard Disk Simulator
+
+== Description ==
+
+The code is written in C++ and uses a variety of data structures to simulate a simplified model of a computer's hard disk memory system.
+
+The main data structures used are:
+
+    BitVector: A bit vector is used to track the status of each block on the disk (free/occupied).
+    Inode: An inode is used to store information about a file, such as its name, size, and location on the disk.
+    MainDir: A directory is used to store a list of file names and their corresponding inode numbers.
+    OpenFileDescriptor: Keep tracked of open / unused file descriptors
+
+The code implements the following operations:
+
+    Create file: Creates a new file with the specified name and allocates space for it on the disk.
+    Delete file: Deletes the specified file and frees the space it was using on the disk.
+    Read file: Reads data from the specified file starting at the specified offset.
+    Write file: Writes data to the specified file starting at the specified offset.
+    List files: Lists all of the files on the disk.
+    Format disk: Formats the disk, deleting all existing files.
+
+
+==Features==
+
+    Creates a simulated disk with a specified number of blocks.
+    Supports file creation, deletion, rename and read/write operations.
+    Uses a bit vector to track the status of each block on the disk (free/occupied).
+    Implements a simple directory structure to store file names and inode numbers.
+
+
+==output==:
+        Displays the hard drive text and all the files which exist
+
+
+==How to compile & run==:
+	Type: g++ -g stub_code.cpp -o a.out
+	      ./a.out
